@@ -1,0 +1,60 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+//= require_tree .
+//= require_self
+ 
+body{
+	font-family: Arial;
+}
+
+header {	
+	background-color:rgb(0,43,122);	
+	
+	#logo_unam {
+
+	}
+
+	#logo_unam img {
+		width: 50%;
+		max-width:150px;
+		margin-left:15%;
+	}
+
+	h1 {
+		color: white;
+		font-weight:bold;
+	}
+ 	
+ 	.r0 {
+		margin-bottom:10px;	
+	}
+
+
+}
+ 
+.navbar-inverse {
+	background-color:rgb(187,136,0);
+	margin-left: 3%;
+	margin-right:3%;
+	border-radius: 10px;
+
+	.navbar-brand {
+		color: white;
+	}
+
+	.navbar-header:hover{
+		background-color:rgb(155,114,0);	
+	}
+
+	.navbar-collapse .navbar-nav>li>a{
+		color: white;		
+		background-color:rgb(187,136,0);	
+	}	
+
+	.navbar-collapse .navbar-nav>li>a:hover{
+		color: white;		
+		background-color:rgb(155,114,0);	
+	}
+}
+

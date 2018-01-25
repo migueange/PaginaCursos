@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<title>Programación 2018-2</title>
+    	<%=favicon_link_tag 'favicon.png' %>
+    	<%= csrf_meta_tags %>
+    	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    	<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	</head>
+  	<body>
+  		<header class="container-fluid">
+  			<!--Encabezados-->
+  			<div class="row r0">
+    			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="logo_unam">
+    				<%= image_tag 'logo_unam.png' %>
+    			</div>
+    			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center" id="titulo">
+    				<div class="row hidden-xs">
+    					<h1>Facultad de Ciencias</h1>
+    				</div>
+    				<div class="row hidden-xs">
+    					<h1>UNAM</h1>
+    				</div>
+    			</div>
+  			</div>
+  			<!--Menú-->
+  			<div class="row r1">
+  				<nav class="navbar navbar-inverse">
+    					<div class="navbar-header">
+      						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        						<span class="icon-bar"></span>
+        						<span class="icon-bar"></span>
+        						<span class="icon-bar"></span>                        
+      						</button>
+      						<a class="navbar-brand" href="#">PROGRAMACIÓN</a>
+    					</div>
+    					<div class="collapse navbar-collapse" id="myNavbar">
+      						<ul class="nav navbar-nav">
+        						<li class="active"><a href="#">Presentación</a></li>
+        						<li class="active"><a href="#">Profesores</a></li>
+        						<li class="active"><a href="#">Temario</a></li>
+        						<li class="active"><a href="#">Evaluación</a></li>
+        						<li class="active"><a href="#">Material</a></li>
+        						<li class="dropdown">	
+          							<a class="dropdown-toggle" data-toggle="dropdown" href="" ="#">Tareas<span class="caret"></span></a>
+          							<ul class="dropdown-menu">
+            							<li><a href="#">Evaluación</a></li>
+            							<li><a href="#">Archivos</a></li>
+          							</ul>
+        						</li>
+        						<li class="active"><a href="#">Lista Correo</a></li>
+      						</ul>	      		
+    					</div>
+				</nav>
+  			</div>
+    	</header>
+    	<div class="container-fluid" id="container">
+    		<%= yield %>
+    	<footer class="container-fluid">
+    		
+    	</footer>
+  	</body>
+</html>
