@@ -1,0 +1,5 @@
+<div class="texto">
+	<%@archivos.each do |f|%>
+		<li><%=link_to f, {:controller => "index", :action => "descargar", :archivo => f }%></li>
+	<%end%>
+</div>
