@@ -47,7 +47,7 @@ header {
 		background-color:rgb(155,114,0);	
 	}
 
-	.navbar-collapse .navbar-nav>li>a{
+	.navbar-collapse .navbar-nav>li>a , .navbar-collapse .navbar-nav>li>a:active,.navbar-collapse .navbar-nav>.dropdown>a,.navbar-collapse .navbar-nav>li>a:visited,.navbar-collapse .navbar-nav>li>a:focus {
 		color: white;		
 		background-color:rgb(187,136,0);	
 	}	
@@ -75,6 +75,10 @@ header {
 	.contenido1 p , .contenido2 p, .contenido1 ul, .contenido2 ul, .datos{
 		margin-left: 10%;
 		margin-right: 30%;		
+	}
+
+	.datos h2 {
+		font-weight: bold;	
 	}
 
 
