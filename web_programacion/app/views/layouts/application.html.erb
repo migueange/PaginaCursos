@@ -12,14 +12,14 @@
   			<!--Encabezados-->
   			<div class="row r0">
     			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="logo_unam">
-    				<%= image_tag 'logo_unam.png' %>
+    				<%= link_to image_tag('logo_unam.png'),"https://www.unam.mx/",:target => "_blank",:alt => "UNAM", :title => "UNAM" %>
     			</div>
     			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center" id="titulo">
     				<div class="row hidden-xs">
     					<h1>Facultad de Ciencias</h1>
     				</div>
     				<div class="row hidden-xs">
-    					<h1>UNAM</h1>
+    					<h1>Semestre 2018-2</h1>
     				</div>
     			</div>
   			</div>
@@ -32,32 +32,36 @@
         						<span class="icon-bar"></span>
         						<span class="icon-bar"></span>                        
       						</button>
-      						<a class="navbar-brand" href="#">PROGRAMACIÓN</a>
+      						<a class="navbar-brand" href="/">PROGRAMACIÓN</a>
     					</div>
     					<div class="collapse navbar-collapse" id="myNavbar">
       						<ul class="nav navbar-nav">
-        						<li class="active"><a href="#">Presentación</a></li>
-        						<li class="active"><a href="#">Profesores</a></li>
-        						<li class="active"><a href="#">Temario</a></li>
-        						<li class="active"><a href="#">Evaluación</a></li>
-        						<li class="active"><a href="#">Material</a></li>
-        						<li class="dropdown">	
-          							<a class="dropdown-toggle" data-toggle="dropdown" href="" ="#">Tareas<span class="caret"></span></a>
+        						<li class="active"><%= link_to "Presentación", "/presentacion"  %></li>
+        						<li class="active"><%= link_to "Profesores", "/profesores"%></li>
+        						<li class="active"><%= link_to "Temario", "/temario"%></li>
+        						<li class="active"><%= link_to "Evaluación", "/evaluacion"%></li>
+        						<li class="active"><%= link_to "Material", "/material"%></li>
+        						<li class="dropdown">
+          							<a class="dropdown-toggle" data-toggle="dropdown" href="" ="#">
+                          Tareas<span class="caret"></span>
+                        </a>
           							<ul class="dropdown-menu">
-            							<li><a href="#">Evaluación</a></li>
-            							<li><a href="#">Archivos</a></li>
+            							<li><%= link_to "Evaluación", "/eval_tareas"%></li>
+            							<li><%= link_to "Archivos", "/archivos_tareas"%></li>
           							</ul>
         						</li>
-        						<li class="active"><a href="#">Lista Correo</a></li>
+        						<li class="active"><%= link_to ("Lista Correo"),"http://www.google.com", :target => "blank"%></li>
       						</ul>	      		
     					</div>
 				</nav>
   			</div>
     	</header>
+      <!--Contenido de la página-->
     	<div class="container-fluid" id="container">
     		<%= yield %>
+      </div>
     	<footer class="container-fluid">
-    		
+    	 
     	</footer>
   	</body>
 </html>

@@ -58,3 +58,25 @@ header {
 	}
 }
 
+.texto {
+	max-width: 85%;
+	height: auto;
+	margin: 0 auto;
+
+	.titulo  h1 {
+		font-weight: bold;
+	}
+
+	.objetivo h2 {
+		font-weight: bold;
+		margin-left: 10%;
+	}
+
+	.contenido1 p , .contenido2 p, .contenido1 ul, .contenido2 ul, .datos{
+		margin-left: 10%;
+		margin-right: 30%;		
+	}
+
+
+	
+}
