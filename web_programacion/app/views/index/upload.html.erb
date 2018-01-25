@@ -1,0 +1,5 @@
+<%= form_tag('/subir', multipart: true) do %>
+ 	<%= file_field_tag 'archivo' %>
+	<%= submit_tag "Subir" %>
+
+<% end %>
