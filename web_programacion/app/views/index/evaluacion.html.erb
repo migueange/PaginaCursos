@@ -3,6 +3,7 @@
 		<div class="datos col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<h2>Método de Evaluación</h2>
 			<p><%=@evaluacion.html_safe%><p>
+			<%= button_to "Consulta tu avance", "/hoja_calculo",:class => "btn-info", :method => :get%>
 		</div>	
 	</div>
 </div>

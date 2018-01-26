@@ -9,22 +9,28 @@
 	</head>
   	<body>
   		<header class="container-fluid">
-  			<!--Encabezados-->
-  			<div class="row r0">
-    			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" id="logo_unam">
-    				<%= link_to image_tag('logo_unam.png'),"https://www.unam.mx/",:target => "_blank",:alt => "UNAM", :title => "UNAM" %>
-    			</div>
-    			<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center" id="titulo">
-    				<div class="row hidden-xs">
-    					<h1>Facultad de Ciencias</h1>
-    				</div>
-    				<div class="row hidden-xs">
-    					<h1>Semestre 2018-2</h1>
-    				</div>
-    			</div>
+  			<div class="row">
+  				<div class="logo col-xs-12 col-sm-6 col-md-6 col-lg-6">
+  					<div class="row">
+  						<div class="izq col-xs-6 col-sm-6 col-md-6 col-lg-6">					
+  							<%= link_to image_tag('logo_unam.png'),"https://www.unam.mx/",:target => "_blank",:alt => "UNAM", :title => "UNAM" %>
+  						</div>
+  						<div class="der col-xs-6 col-sm-6 col-md-6 col-lg-6">
+  							<h3 class="hidden-xs hidden-sm">Universidad Nacional<br>Autónoma de México</h3>
+  						</div>
+  					</div>
+
+  				</div>
+  				<div class="img_ciencias hidden-xs col-sm-6 col-md-6 col-lg-6">
+  					<div class="opacidad hidden-xs">
+  						<h2 class="hidden-xs hidden-sm">Facultad de Ciencias</h2>
+  					</div>
+  				</div>
   			</div>
-  			<!--Menú-->
+    	</header>
+    	<!--Menú-->
   			<div class="row r1">
+  				<div class="barra-oro">
   				<nav class="navbar navbar-inverse">
     					<div class="navbar-header">
       						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -54,8 +60,8 @@
       						</ul>	      		
     					</div>
 				</nav>
+			</div>
   			</div>
-    	</header>
       <!--Contenido de la página-->
     	<div class="container-fluid" id="container">
     		<%= yield %>

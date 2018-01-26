@@ -117,4 +117,38 @@ problemas relacionados con su disciplina.</li>
 		send_file params[:archivo]
 	end
 
+	def eval_tareas
+		@eval_tareas = "
+Las tareas desarrolladas durante el semestre deberán seguir los siguientes criterios al momento de ser entregadas.
+<ul>
+<li>La entrega de tareas impresas se hará a la hora de clase.</li>
+<li>En el caso de entrega de programas, se tomarán en cuenta los siguientes aspectos.</li>
+<br>
+  <ul>
+    <li>Funcionalidad. No se reciben programas que 'casi jalan' o que funcionen perfectamente pero resuelvan un problema diferente al que se planteó.</li>
+    <li>Ser robusto.</li>
+    <li>Facilidad de uso.</li>
+    <li>Eficiencia.</li>
+    <li>Documentacion.</li>
+  </ul>
+<br>
+</ul>
+<ul>
+    <li>Deberán subir su material a la plataforma Classroom en un archivo .zip con un README.txt adentro que contenga su nombre o nombres si es el caso.</li>
+    <li>Las tareas enviadas tendrán como hora límite de entrega las 23:59 hr. del día establecido.</li>
+    <li>No se tomarán en cuenta las tareas recibidas después de la hora límite establecida.</li>
+    <li>Los reportes, tareas de investigación, se deben enviar en formato pdf. Deben incluir título, nombre del autor, referencias de las fuentes que consultaron y ortografía correcta.</li>
+    <li>No se tomarán en cuenta las tareas que no cumplan con los requisitos aquí descritos.</li>
+</ul>
+"
+	end
+
+	def archivos_tareas
+		@archivos = Dir.glob("#{Rails.root}/public/tareas/*")
+	end
+
+	def hoja_calculo
+		
+	end
+
 end
