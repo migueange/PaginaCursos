@@ -113,6 +113,24 @@ problemas relacionados con su disciplina.</li>
 		@archivos = Dir.glob("#{Rails.root}/public/material/*")
 	end
 
+	def subir_material
+		@archivos = Dir.glob("#{Rails.root}/public/material/*")
+	end
+
+	def cargar_material
+		permited = allowed_params
+		if permited
+			uploaded_io = permited
+			File.open(Rails.root.join('public', 'material', uploaded_io.original_filename), 'wb') do |file|
+	  			file.write(uploaded_io.read)
+			end
+		else			
+			flash[:alert] = "Por favor ingresa un archivo."
+		end
+		@archivos = Dir.glob("#{Rails.root}/public/material/*")
+		render 'subir_material'
+	end
+
 	def descargar
 		send_file params[:archivo]
 	end
@@ -147,8 +165,32 @@ Las tareas desarrolladas durante el semestre deberán seguir los siguientes crit
 		@archivos = Dir.glob("#{Rails.root}/public/tareas/*")
 	end
 
-	def hoja_calculo
-		
+	def subir_tareas
+		@archivos = Dir.glob("#{Rails.root}/public/tareas/*")
 	end
 
+	def cargar_tareas		
+		permited = allowed_params
+		if permited
+			uploaded_io = permited
+			File.open(Rails.root.join('public', 'tareas', uploaded_io.original_filename), 'wb') do |file|
+	  			file.write(uploaded_io.read)
+			end
+		else
+			flash[:alert] = "Por favor ingresa un archivo."
+		end
+		@archivos = Dir.glob("#{Rails.root}/public/tareas/*")
+		render 'subir_tareas'
+	end
+
+	def hoja_calculo		
+	end
+
+	 private
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def allowed_params
+    	if (params[:archivo])
+       		params.require(:archivo)
+   		end
+    end
 end

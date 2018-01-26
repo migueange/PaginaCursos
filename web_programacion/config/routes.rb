@@ -10,9 +10,13 @@ Rails.application.routes.draw do
 	get '/archivos_tareas' => 'index#archivos_tareas'
 	#Descarga de archivos
 	post '/descargar' => 'index#descargar'
-	get '/subir_archivo' => 'index#material'
 	#Carga de archivos
-
+	get 'subir_tareas' => 'index#subir_tareas'
+	post 'cargar_tareas' =>  'index#cargar_tareas'
+	get 'cargar_tareas' =>  'index#subir_tareas'
+	get 'subir_material' => 'index#subir_material'
+	post 'cargar_material' => 'index#cargar_material'
+	get 'cargar_material' => 'index#subir_material'
 	#Hoja calculo
 	get "/hoja_calculo" => 'index#hoja_calculo'
 

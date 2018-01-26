@@ -32,6 +32,10 @@ header {
 				margin-top:30px;
 				color:white;
 			}
+
+			span{
+				color:rgb(187,136,0);
+			}
 		}
 	}
 
@@ -40,7 +44,7 @@ header {
 		background-image:url(fciencias.jpg);
 
 		.opacidad{
-			background-color:rgba(0,43,122,0.5);	
+			background-color:rgba(0,43,122,0.6);	
 			height:110px;
 			min-width:100vmax;
 			margin-left:-4%;
@@ -73,23 +77,33 @@ header {
 	margin-left:10%;
 	margin-right:20%;
 	border:0;
+	transition: all 0.35s ease-in-out;		
+
 
 	.navbar-brand {
 		color: white;
 	}
 
 	.navbar-header:hover{
-		background-color:rgb(155,114,0);	
+		background-color:rgb(187,136,0);
+		transition: all 0.35s ease-in-out;		
 	}
 
 	.navbar-collapse .navbar-nav>li>a , .navbar-collapse .navbar-nav>li>a:active,.navbar-collapse .navbar-nav>.dropdown>a,.navbar-collapse .navbar-nav>li>a:visited,.navbar-collapse .navbar-nav>li>a:focus {
 		color: white;		
-		background-color:rgb(187,136,0);	
+		background-color:rgb(187,136,0);
+		transition: all 0.35s ease-in-out;		
 	}	
 
 	.navbar-collapse .navbar-nav>li>a:hover{
 		color: white;		
-		background-color:rgb(155,114,0);	
+		background-color:rgb(155,114,0);
+		transition: all 0.35s ease-in-out;	
+	}
+
+	.navbar-toggle:hover,.navbar-toggle:focus {
+		background-color:rgb(155,114,0);
+		transition: all 0.35s ease-in-out;	
 	}
 }
 
@@ -121,10 +135,17 @@ header {
 		margin: 0 auto;
 	}
 
+	.list-group>a{
+		background-color:rgb(0,43,122);
+		color: white;
+		transition: all 0.35s ease-in-out;
+	}
+
+
 	.list-group>a:hover {
 		color: white;		
-		font-weight: bold;
 		background-color:rgb(187,136,0);
+		transition: all 0.35s ease-in-out;
 	}
 	
 	iframe {
@@ -133,7 +154,39 @@ header {
 	}	
 
 	input {
-		
 		border-radius: 10px;
 	}
+
+	.notice {
+		color: red;
+		margin-left:30%;
+	}
+
+	.carga_form {
+		max-width:500px;
+		margin: 0 auto;
+		margin-top:20px;
+		input[type="file"]{
+			margin:0 auto;
+		}
+
+		input[type="submit"]{
+			background-color:rgb(187,136,0);
+			transition: all 0.35s ease-in-out;
+			color: white;
+			font-size: 18px;
+			margin-left: 25%;
+			margin-top: 10px;
+			width: 200px;
+		}
+
+		input[type="submit"]:hover {
+			background-color:rgb(155,114,0);
+			transition: all 0.35s ease-in-out;
+
+		}
+	}
 }
+
+
+
